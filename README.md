@@ -18,6 +18,7 @@ But before it, you will need to install the required libraries.
 Enjoy!
 ## To-do lists
 <ul>
+    <li>An actual Integration for Notion</li>
     <li>Auto requirements installer</li>
     <li>Startup with Notion</li>
     <li>More activites: Idling, Currently typing, Created page, etc.</li>
