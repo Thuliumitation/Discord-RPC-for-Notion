@@ -19,6 +19,7 @@ Enjoy!
 ## To-do lists
 <ul>
     <li>Auto requirements installer</li>
+    <li>Startup with Notion</li>
     <li>More activites: Idling, Currently typing, Created page, etc.</li>
     <li>Performance improvement</li>
     <li>Status customization</li>
