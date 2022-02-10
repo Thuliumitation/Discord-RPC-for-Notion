@@ -1,4 +1,4 @@
-from pypresence import Presence
+import pypresence
 import time
 import win32gui
 import win32process
@@ -19,13 +19,17 @@ for i in gw.getAllTitles():
     if get_app_name(win32gui.FindWindow(None, i)) == "Notion.exe":
         hwnd = win32gui.FindWindow(None, i)
         break
+try:
+    client_id = 940875215284609075
+    RPC = pypresence.Presence(client_id=client_id)
+    RPC.connect()
+    print("Connection established!")
+    start = int(time.time())
+    while True:
+        RPC.update(state="Organizing life", large_image='notion'
+                , start=start, details=f"Writing: {win32gui.GetWindowText(hwnd)}")
+        time.sleep(5)
 
-client_id = 940875215284609075
-RPC = Presence(client_id=client_id)
-RPC.connect()
-print("Connection established!")
-start = int(time.time())
-while True:
-    RPC.update(state="Organizing life", large_image='notion'
-               , start=start, details=f"Writing: {win32gui.GetWindowText(hwnd)}")
-    time.sleep(5)
+except pypresence.exceptions.DiscordNotFound:
+    print("You need to install Discord! If Discord is installed, you need to run it.")
+
