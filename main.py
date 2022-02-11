@@ -35,5 +35,7 @@ if hwnd is not None:
 
     except pypresence.exceptions.DiscordNotFound:
         print("You need to install Discord! If Discord is installed, you need to run it.")
+    except pypresence.exceptions.ServerError:
+        print("Connection to Discord has been closed")
 else:
     print("You need to run Notion!")
